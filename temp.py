@@ -5,6 +5,10 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
 
 @app.route('/', methods = ['POST','GET'])
 def home():
